@@ -4,14 +4,14 @@
 }
 
 body {
-    margin: 0px;
+    margin: 10px;
     font-family: Arial, sans-serif;
 }
 header, section {
     padding: 20px;
 }
 p, li {
-    line-height: 1.5em;
+    line-height: 3em;
 }
 
 #inspiration {
