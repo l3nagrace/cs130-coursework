@@ -1,0 +1,283 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+
+
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+/* Your Code Here */
+
+aside {
+    font-size: 15px;
+    background-color: #000;
+    grid-area: left;
+    display: flex;
+    flex-direction:column;
+    justify-content:left;
+    row-gap: 4%;
+    padding: 20px;
+    padding-left: 30px;
+    
+}
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+/* Your Code Here */
+
+header {
+    background: #111;
+    position: fixed;
+    font-size: 12px;
+    letter-spacing: 2px;
+    width: calc(100vw - 250px);
+    left: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    column-gap: 2%;
+    padding: 35px;
+}
+
+ #upgrade {
+    min-width: 8.5em;
+    min-height: 2em;
+    border-width: 1pt;
+    text-align: center;
+    border-color: white;
+    border-style: solid;
+    border-radius: 15pt;
+    padding-top: 0.25em;
+}
+
+#profile {
+    min-width: 8.5em;
+    min-height: 2em;
+    text-align: center;
+    background-color: rgb(58, 58, 58);
+    border-radius: 15pt;
+    padding-top: 0.25em;
+} 
+
+
+nav {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction:row;
+    justify-content:left;
+    column-gap: 2%;
+    padding-left: 35px;
+
+}
+
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+/* Your Code Here */
+
+section{
+    padding: 20px;
+    width: 20%;
+
+}
+
+section > div {
+    border-radius: 15px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+ .artist-card {
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+} 
+
+.artist-card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+#featured-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 70%;
+} 
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    background: #1DB954;
+    color: white;
+    border-radius: 20px;
+    border-color: transparent;
+    float: right;
+    visibility: hidden;
+}
+
+.artist-card:hover .play-button {
+    visibility: visible;
+}
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+/* extra credit hover effects */
+#home, #search, #library {
+    color: #a9a9a9;
+}
+
+ #home:hover, #search:hover, #library:hover {
+     color: white;
+ }
+
+ #playlists:hover, #albums:hover {
+    border-bottom: solid;
+    border-width: 5px;
+    border-color: #1DB954;
+    
+ }
+
+ #upgrade:hover, #profile:hover {
+     background-color: #a9a9a98b;
+ }
+
+.selected {
+    border-bottom: solid;
+    border-width: 5px;
+    border-color: #1DB954;
+    
+}
+
+.selected_1 {
+    border-left: solid;
+    border-width: 5px;
+    border-color: #1DB954
+    
+}
+
+/* media queries */
+
+    @media only screen and (max-width: 900px) {
+
+        .artist-card {
+            width: 30%;
+          }
+       
+        .artist-card img {
+            max-width: 100%;
+            height: auto;
+          } 
+     }
+
+     @media only screen and (max-width: 600px) {
+
+        body {
+            overflow: hidden;
+            margin: 0px;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto 100px;
+            grid-template-areas:
+               "main"
+               "bottom";
+            height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            left: 0px;
+        }
+
+        .artist-card {
+            width: 50%;
+          }
+
+        aside {
+            display: none;
+          }
+    
+     }
+
+    
+
+
+ 
+
+
+
+
