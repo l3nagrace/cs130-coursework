@@ -18,7 +18,7 @@ const desertTheme = () => {
    document.querySelector('#desert').style.color = '#A8651E';
    content.style.background = '#EFDEC2';
    content.style.color = '#A8651E';
-   button.style.borderBottom = 'solid, 1px, #774713';
+   button.style.borderBottom = 'solid, 1px';
 }
 
 const oceanTheme = () => {
