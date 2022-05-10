@@ -111,12 +111,11 @@ for (const track of tracks) {
 // logic.
 
 const playSong = ev => {
-
   console.log(ev.currentTarget.dataset.index);
   const idx = Number(ev.currentTarget.dataset.index);
-  const currentTrack = tracks[idx];
-  console.log(currentTrack);
-
+  console.log(tracks[idx].preview_url);
+  document.querySelector('#audio-source').src = tracks[idx].preview_url;
+  
   const audio = document.querySelector('audio');
   audio.load();
   audio.play();
