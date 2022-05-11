@@ -18,8 +18,6 @@
  * 
  */
 
-//1 thumbnail click
-
 let currentIndex = 0;
 
 //1//
@@ -29,6 +27,8 @@ const handleThumbnailClick = ev => {
     console.log(elem);
     const bgImage = elem.style.backgroundImage;
     document.querySelector('.featured_image').style.backgroundImage = bgImage;
+
+   // currentIndex = elem.getAttribute('data-index')
 }
 
 const images = [
@@ -56,42 +56,18 @@ const initScreen = () => {
 };
 
 
-//2 next button
 
-const next = () => {
-    if (currentIndex < 7) {
-         currentIndex += 1;
-     } else {
-         currentIndex = 0;
-     }
- 
-     console.log('Show next image', currentIndex);
-     console.log(images[currentIndex]);
-     document.querySelector('.featured_image').style.backgroundImage = `
-         url('${images[currentIndex]}')
-         `;
- } 
+//2
 
- //3 previous button
 
 const previous = () => {
-    if (currentIndex > 0) {
-        currentIndex -= 1;
-    } else {
-        currentIndex = 7;
-    }
-
+    currentIndex -= 1;
     console.log('Show previous image', currentIndex);
     console.log(images[currentIndex]);
-    document.querySelector('.featured_image').style.backgroundImage = `
-        url('${images[currentIndex]}')
-        `;
 } 
 
-//4 featured image click
-
-const featuredImageClick = () => {
-    if (currentIndex < 7) {
+const next = () => {
+   if (currentIndex < 7) {
         currentIndex += 1;
     } else {
         currentIndex = 0;
@@ -102,7 +78,9 @@ const featuredImageClick = () => {
     document.querySelector('.featured_image').style.backgroundImage = `
         url('${images[currentIndex]}')
         `;
-}
+} 
+
+
 
 
 initScreen();
