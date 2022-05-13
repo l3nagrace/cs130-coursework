@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'gi-regular';
+    src: url("glacial-indifference/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'gi-bold';
+    src: url("glacial-indifference/GlacialIndifference-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'gi-italic';
+    src: url("glacial-indifference/GlacialIndifference-Italic.otf") format("opentype");
+}
+
+* a:link, a:visited, a:active {
+    text-decoration: none;}
+
+h1{
+    font-family: 'gi-italic';
+    font-size: 80px;
+}
+
+h2{ 
+    font-family: 'gi-bold';
+    font-size: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    margin: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    color: black;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    font-family: 'gi-regular';
+
+}
+
+main { 
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+}
+
+
+.titletext {
+    margin-top: 10%;
+}
