@@ -28,6 +28,12 @@ h2{
     font-size: 30px;
 }
 
+h3{
+    font-family: 'gi-italic';
+    font-size: 30px;
+
+}
+
 p{
     font-family: 'gi-regular';
     font-size: 18px;
@@ -48,6 +54,14 @@ p{
   top: 0.3em;
   right: 0;
   opacity: 0; 
+}
+
+#comment-box, #post {
+    border: none;
+    border-radius: 5px;
+}
+#post:hover{
+    background-color: rgb(54, 169, 155);
 }
 
 /* #movies.html, #books.html, #movies.html {
