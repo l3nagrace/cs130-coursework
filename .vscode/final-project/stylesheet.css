@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'gi-regular';
+    src: url("glacial-indifference/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'gi-bold';
+    src: url("glacial-indifference/GlacialIndifference-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'gi-italic';
+    src: url("glacial-indifference/GlacialIndifference-Italic.otf") format("opentype");
+}
+
+* a:link, a:visited, a:active {
+    text-decoration: none;}
+
+h1{
+    font-family: 'gi-italic';
+    font-size: 80px;
+}
+
+h2{ 
+    font-family: 'gi-bold';
+    font-size: 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    margin: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+    color: black;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    font-family: 'gi-regular';
+
+}
+
+main { 
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+}
+
+
+.titletext {
+    margin-top: 10%;
+}
+
+
+/* book cards */
+
+/* section{
+    width: 100%;
+
+} */
+
+/* section {
+    border-radius: 35px;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.artist-card {
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+} 
+
+.artist-card img {
+    width: 100%;
+    border-radius: 20%;
+}
+
+#featured-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 70%;
+}  */
+.artist-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 75%;
+    border-width: 0px;
+    border-color: white;
+    color: black;
+    margin-left: 13%;
+};
+
+.artist-card > img {
+    justify-content: right;
+    border-radius: 50%;
+}
+
+.artist-card img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+section > div {
+    border-radius: 15px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    justify-content: center;
+}
