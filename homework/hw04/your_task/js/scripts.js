@@ -61,7 +61,7 @@ const getAlbums = (term) => {
     fetch('https://www.apitutor.org/spotify/simple/v1/search?type=album&q=' + term)
     .then(response => response.json())
         .then(albums => {
-            console.log(albums);
+            console.log("album:", albums);
 
             //when no albums are found
             if (albums.length === 0) {
@@ -77,7 +77,7 @@ const getAlbums = (term) => {
         
                     <section class="album-card" id="${album.id}">
                         <div>
-                            <img src="${album.image_url}" alt="Album cover image of ${track.album.name}">
+                            <img src="${album.image_url}" alt="Album cover image of ${album.name}">
                             <h2>${album.name}</h2>
                             <div class="footer">
                                 <a href="${album.spotify_url}" target="_blank">
