@@ -46,8 +46,8 @@ anime.timeline({loop: true})
   }).add({
     targets: '.ml4',
     opacity: 0,
-    duration: 500,
-    delay: 500
+    duration: 100,
+    delay: 100
   });
 
   var post= document.getElementById("post");
@@ -60,3 +60,6 @@ post.addEventListener("click", function(){
     document.getElementById("unordered").appendChild(li);
  
 });
+
+
+

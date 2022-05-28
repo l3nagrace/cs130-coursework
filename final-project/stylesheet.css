@@ -18,7 +18,7 @@
 
 h1{
     font-family: 'gi-bold';
-    font-size: 90px;
+    font-size: 100px;
     line-height: 85px;
     /* color: #008083; */
 }
@@ -30,7 +30,7 @@ h2{
 
 h3{
     font-family: 'gi-italic';
-    font-size: 30px;
+    font-size: 25px;
 
 }
 
@@ -134,36 +134,6 @@ main {
 
 /* book cards */
 
-/* section{
-    width: 100%;
-
-} */
-
-/* section {
-    border-radius: 35px;
-    background-color: #eaeaea;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-}
-
-.artist-card {
-    justify-content: center;
-    height: 100%;
-    width: 30%;
-} 
-
-.artist-card img {
-    width: 100%;
-    border-radius: 20%;
-}
-
-#featured-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 70%;
-}  */
 .book-card {
     display: flex;
     align-items: center;
@@ -228,42 +198,157 @@ section > div {
   /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
-    width: 80%;
-    height: 150%;
+    width: 85%;
+    height: 175%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
-    background-color: #bbb;
+    background-color: rgb(219, 219, 219);
     color: black;
   }
   
   /* Style the back side */
   .flip-card-back {
-    background-color: orange;
+    background-color: rgb(8, 186, 186);
     color: white;
     transform: rotateY(180deg);
   }
 
-  /* music cards */
-.music-card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-    width: 35%;
-    background-color: #249EA0;
+ /* Style the back side
+ .tv-flip-card-back {
+    background-color: orange;
     color: white;
-    border-radius: 30px;
-    margin-top: 30px;
-};
+    transform: rotateY(180deg);
+      }
+     */
 
-/* section > div {
-    border-radius: 15px;
+/* music cards */
+.music-page {
     display: flex;
-} */
+    flex-direction: row;
+}
+.music-card-info {
+    display: flex;
+    background-color:rgb(54, 169, 155);
+    color: white;
+    align-items: center;
+    width: 95%;
+}
+.music-card-info img {
+    align-items: center;
+    border: solid orange;
+}
+
+#music-content{
+    /* width: 60%; */
+    /* padding: 20px; */ */
+    /* /* margin: 10px; */
+}
+
+.music-footer h2 {
+    font-size: 65px;
+    line-height: 60px;
+}
+/* reviewc card */
+.review-card {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
+
+.review-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* music heading - rap */
+#heading-rap {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color:rgb(54, 169, 155);
+    background-color:none;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 15px;
+    /* margin-top: 10px; */
+    padding-top: 25px;
+}
+#heading-rap h1 {
+    font-size: 170px;
+}
+
+#heading-rap h2 {
+    font-size: 20px;
+    color: black;
+}
+
+#heading-jazz {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* movie heading */
+#movie-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color:orange;
+    background-color:none;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 15px;
+    /* margin-top: 10px; */
+    padding-top: 30px;
+}
+#movie-heading h1 {
+    font-size: 135px;
+}
+
+#movie-heading h2 {
+    font-size: 25px;
+    color: black;
+}
+
+.movie-cards {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+
+/* tv heading */
+#tv-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color:rgb(54, 169, 155);
+    background-color:none;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 15px;
+    /* margin-top: 10px; */
+    padding-top: 45px;
+}
+#tv-heading h1 {
+    font-size: 135px;
+}
+
+#tv-heading h2 {
+    font-size: 25px;
+    color: black;
+}
+
+.tv-cards {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+
+
 
 
 
