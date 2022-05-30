@@ -30,7 +30,7 @@ h2{
 
 h3{
     font-family: 'gi-italic';
-    font-size: 25px;
+    font-size: 30px;
 
 }
 
@@ -114,18 +114,22 @@ main {
 }
 
 #introimage {
-    width: 30%;
+    width: 40%;
     border-radius: 50%;
+    border: solid 10px rgb(54, 169, 155);
 }
-
-.introtext {
+.intro {
     display: flex;
-    flex-direction: column;
-    justify-content: right;
+    flex-direction: row;
     background-color: orange;
     padding: 3%;
     border-radius: 30px;
-    color: white;
+    color: black;
+}
+.introtext {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 #logo {
@@ -134,12 +138,42 @@ main {
 
 /* book cards */
 
+/* section{
+    width: 100%;
+
+} */
+
+/* section {
+    border-radius: 35px;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.artist-card {
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+} 
+
+.artist-card img {
+    width: 100%;
+    border-radius: 20%;
+}
+
+#featured-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 70%;
+}  */
 .book-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10%;
-    width: 75%;
+    /* height: 10%;
+    width: 75%; */
     border-width: 0px;
     border-color: white;
     color: black;
@@ -153,7 +187,11 @@ main {
 
 .book-card img {
     width: 20%;
-    border-radius: 50%;
+    border-radius: 5%;
+}
+.card-footer h1{
+    font-size: 70px;
+    line-height: 60px;
 }
 
 section > div {
@@ -216,82 +254,6 @@ section > div {
     color: white;
     transform: rotateY(180deg);
   }
-
- /* Style the back side
- .tv-flip-card-back {
-    background-color: orange;
-    color: white;
-    transform: rotateY(180deg);
-      }
-     */
-
-/* music cards */
-.music-page {
-    display: flex;
-    flex-direction: row;
-}
-.music-card-info {
-    display: flex;
-    background-color:rgb(54, 169, 155);
-    color: white;
-    align-items: center;
-    width: 95%;
-}
-.music-card-info img {
-    align-items: center;
-    border: solid orange;
-}
-
-#music-content{
-    /* width: 60%; */
-    /* padding: 20px; */ */
-    /* /* margin: 10px; */
-}
-
-.music-footer h2 {
-    font-size: 65px;
-    line-height: 60px;
-}
-/* reviewc card */
-.review-card {
-    display: flex;
-    flex-direction: row;
-    background-color: orange;
-}
-
-.review-card-info {
-    display: flex;
-    flex-direction: column;
-}
-
-/* music heading - rap */
-#heading-rap {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    color:rgb(54, 169, 155);
-    background-color:none;
-    margin-right: 40px;
-    margin-left: 40px;
-    border-radius: 15px;
-    /* margin-top: 10px; */
-    padding-top: 25px;
-}
-#heading-rap h1 {
-    font-size: 170px;
-}
-
-#heading-rap h2 {
-    font-size: 20px;
-    color: black;
-}
-
-#heading-jazz {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
 /* movie heading */
 #movie-heading {
     display: flex;
@@ -348,7 +310,243 @@ section > div {
     width: 100px;
 }
 
+/* rap cards */
+.rap-music-page {
+    display: flex;
+    flex-direction: row;
+}
+.rap-music-card-info {
+    display: flex;
+    background-color:rgb(54, 169, 155);
+    color: white;
+    align-items: center;
+    width: 500px;
+}
+.rap-music-card-info img {
+    align-items: center;
+    border: solid orange;
+}
 
+#rap-music-content{
+    /* width: 60%; */
+    /* padding: 20px; */ */
+    /* /* margin: 10px; */
+}
 
+.rap-music-footer h2 {
+    font-size: 50px;
+    line-height: 60px;
+}
+/* rap review card */
+.rap-review-card {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
 
+.rap-review-card-info {
+    display: flex;
+    flex-direction: column;
+}
 
+/* music heading - RAP */
+#heading-rap {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: orange;
+    background-color:none;
+    margin-right: 40px;
+    margin-left: 40px;
+    /* margin-top: 10px; */
+    padding-top: 25px;
+}
+#heading-rap h1 {
+    font-size: 170px;
+    text-shadow: 5px 5px rgb(54, 169, 155);
+
+}
+#heading-rap h2 {
+    font-size: 20px;
+    color: black;
+}
+/* music heading - JAZZ */
+#heading-jazz {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color:none;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 15px;
+    /* margin-top: 10px; */
+    padding-top: 10px;
+}
+#heading-jazz h1 {
+    font-size: 170px;
+    color: orange;
+    text-shadow: 5px 5px rgb(54, 169, 155);
+}
+
+#heading-jazz h2{
+    font-size: 20px;
+    color: black;
+}
+
+/* jazz cards */
+.jazz-music-page {
+    display: flex;
+    flex-direction: row;
+}
+.jazz-music-card-info {
+    display: flex;
+    background-color:rgb(54, 169, 155);
+    color: white;
+    align-items: center;
+    width: 500px;
+}
+.jazz-music-card-info img {
+    align-items: center;
+    border: solid orange;
+}
+
+.jazz-music-footer h2 {
+    font-size: 65px;
+    line-height: 60px;
+}
+
+.jazz-music-footer h2 {
+    line-height: 70px;
+}
+/* jazz review card */
+.jazz-review-card {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
+
+.jazz-review-card-info {
+    display: flex;
+    flex-direction: column;
+}
+/* music heading - alt */
+#heading-alt {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    background-color:none;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 15px;
+    /* margin-top: 10px; */
+    padding-top: 30px;
+}
+#heading-alt h1 {
+    font-size: 170px;
+    color: orange;
+    text-shadow: 5px 5px rgb(54, 169, 155);
+}
+
+#heading-alt h2{
+    font-size: 20px;
+    color: black;
+}
+
+/* alt cards */
+.alt-music-page {
+    display: flex;
+    flex-direction: row;
+}
+.alt-music-card-info {
+    display: flex;
+    background-color:rgb(54, 169, 155);
+    color: white;
+    align-items: center;
+    width: 500px;
+}
+.alt-music-card-info img {
+    align-items: center;
+    border: solid orange;
+}
+
+.alt-music-footer h2 {
+    font-size: 65px;
+    line-height: 60px;
+}
+
+.alt-music-footer h2 {
+    line-height: 70px;
+}
+/* alt review card */
+.alt-review-card {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
+.alt-review-card-info {
+    display: flex;
+    flex-direction: column;
+}
+/* music heading - alt */
+#heading-pop {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color:none;
+    margin-right: 40px;
+    margin-left: 40px;
+    border-radius: 15px;
+    /* margin-top: 10px; */
+    padding-top: 30px;
+}
+#heading-pop h1 {
+    font-size: 170px;
+    color: orange;
+    text-shadow: 5px 5px rgb(54, 169, 155);
+}
+
+#heading-pop h2{
+    font-size: 20px;
+    color: black;
+}
+
+/* pop cards */
+.pop-music-page {
+    display: flex;
+    flex-direction: row;
+}
+.pop-music-card-info {
+    display: flex;
+    background-color:rgb(54, 169, 155);
+    color: white;
+    align-items: center;
+    width: 500px;
+}
+.pop-music-card-info img {
+    align-items: center;
+    border: solid orange;
+}
+
+.pop-music-footer h2 {
+    font-size: 65px;
+    line-height: 60px;
+}
+
+.pop-music-footer h2 {
+    line-height: 70px;
+}
+/* pop review card */
+.pop-review-card {
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+}
+.pop-review-card-info {
+    display: flex;
+    flex-direction: column;
+}
+/* for all three */
+#review-body {
+    display: flex;
+    flex-direction: row;
+}
