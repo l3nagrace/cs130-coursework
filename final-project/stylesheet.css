@@ -41,6 +41,32 @@ p{
 }
 /* homepage css */
 
+#logo {
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+}
+
 .ml4 {
   position: relative;
   font-weight: 900;
@@ -90,10 +116,21 @@ nav {
     display: flex;
     justify-content: space-between;
     color: black;
-    /* background: orange; */
     margin: 10px;
     padding: 10px;
     border-radius: 15px;
+}
+
+nav a, nav a:visited, nav a:link {
+    color: grey;
+}
+
+nav a:active {
+    color: teal;
+}
+
+nav a:hover {
+    color:orange;
 }
 
 ul {
@@ -107,6 +144,11 @@ main {
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
+}
+
+.heroimage {
+    display: flex;
+    align-items: center;
 }
 
 .titletext {
@@ -138,36 +180,6 @@ main {
 
 /* book cards */
 
-/* section{
-    width: 100%;
-
-} */
-
-/* section {
-    border-radius: 35px;
-    background-color: #eaeaea;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-}
-
-.artist-card {
-    justify-content: center;
-    height: 100%;
-    width: 30%;
-} 
-
-.artist-card img {
-    width: 100%;
-    border-radius: 20%;
-}
-
-#featured-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 70%;
-}  */
 .book-card {
     display: flex;
     align-items: center;
@@ -177,7 +189,7 @@ main {
     border-width: 0px;
     border-color: white;
     color: black;
-    margin-left: 13%;
+    margin-left: 5%;
 };
 
 .book-card > img {
@@ -190,7 +202,12 @@ main {
     border-radius: 5%;
 }
 .card-footer h1{
-    font-size: 70px;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.card-footer h2{
+    font-size: 30px;
     line-height: 60px;
 }
 
@@ -199,7 +216,7 @@ section > div {
     background-color: none;
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
@@ -215,7 +232,7 @@ section > div {
     width: 300px;
     height: 200px;
 
-    perspective: 1000px; Remove this if you don't want the 3D effect
+    perspective: 1000px; 
   }
   
   /* This container is needed to position the front and back side */
@@ -279,7 +296,7 @@ section > div {
 .movie-cards {
     display: flex;
     flex-direction: row;
-    width: 100px;
+    /* width: 100px; */
 }
 
 /* tv heading */
