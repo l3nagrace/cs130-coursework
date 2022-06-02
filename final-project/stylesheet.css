@@ -39,6 +39,37 @@ p{
     font-size: 18px;
 
 }
+
+/* navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+nav a, nav a:visited, nav a:link {
+    color: grey;
+}
+
+nav a:active {
+    color: teal;
+}
+
+nav a:hover {
+    color:orange;
+}
+
+ul.menu {
+    display: flex;
+    list-style: none;
+    font-family: 'gi-regular';
+
+}
+
 /* homepage css */
 
 #logo {
@@ -54,7 +85,6 @@ p{
     background-size: 200% auto;
     color: #fff;
     background-clip: text;
-    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 2s linear infinite;
@@ -81,22 +111,35 @@ p{
   right: 0;
   opacity: 0; 
 }
-
-#comment-box, #post {
+.comment-section{
+    background-color:rgb(54, 169, 155);
+    border-radius: 20px;
+}
+#comment-box {
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: white;
+    font-family: gi-regular;
+    padding: 15px;
+}
+#post {
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: white;
+    font-family: gi-regular;
+    padding: 10px;
 }
 #post:hover{
-    background-color: rgb(54, 169, 155);
+    background-color: orange;
+    color: white;
+}
+#unordered {
+    font-family: gi-regular;
+    color:white;
 }
 
-/* #movies.html, #books.html, #movies.html {
-    color: #a9a9a9;
-}
-
-#movies.html:hover, #books.html:hover, #movies.html:hover {
-     color: white;
- } */
 
 html {
     scroll-behavior: smooth;
@@ -109,35 +152,6 @@ body * {
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    /* background-color: #FAAB36; */
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    color: black;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-nav a, nav a:visited, nav a:link {
-    color: grey;
-}
-
-nav a:active {
-    color: teal;
-}
-
-nav a:hover {
-    color:orange;
-}
-
-ul {
-    display: flex;
-    list-style: none;
-    font-family: 'gi-regular';
-
 }
 
 main { 
@@ -156,29 +170,42 @@ main {
 }
 
 #introimage {
-    width: 40%;
+    width: 30%;
+    height: 30%;
     border-radius: 50%;
-    border: solid 10px rgb(54, 169, 155);
+    border: solid 10px rgb(255, 255, 255);
+    justify-content: center;
+    margin: 30px;
 }
 .intro {
     display: flex;
     flex-direction: row;
     background-color: orange;
-    padding: 3%;
     border-radius: 30px;
     color: black;
 }
 .introtext {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
+.introtext h3{
+    font-size: 40px;
+}
 #logo {
     font-family: 'gi-bold';
 }
 
 /* book cards */
+.book-card button {
+    background-color:rgb(54, 169, 155);
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: gi-bold;
+    border: none;
+    padding: 10px;
+}
 
 .book-card {
     display: flex;
@@ -235,7 +262,6 @@ section > div {
     perspective: 1000px; 
   }
   
-  /* This container is needed to position the front and back side */
   .flip-card-inner {
     position: relative;
     width: 100%;
@@ -244,13 +270,11 @@ section > div {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
+
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
   
-  /* Position the front and back side */
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 85%;
@@ -259,13 +283,11 @@ section > div {
     backface-visibility: hidden;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: rgb(219, 219, 219);
     color: black;
   }
   
-  /* Style the back side */
   .flip-card-back {
     background-color: rgb(8, 186, 186);
     color: white;
@@ -286,6 +308,7 @@ section > div {
 }
 #movie-heading h1 {
     font-size: 135px;
+    text-shadow: 5px 5px rgb(54, 169, 155);
 }
 
 #movie-heading h2 {
@@ -298,7 +321,18 @@ section > div {
     flex-direction: row;
     /* width: 100px; */
 }
-
+.movie-cards button {
+    background-color: white;
+    font-size: 20px;
+    color:rgb(54, 169, 155);
+    font-family: gi-bold;
+    border-radius: 30px;
+    border: none;
+    padding: 3px;
+}
+.movie-cards button:hover {
+    background-color: orange;
+}
 /* tv heading */
 #tv-heading {
     display: flex;
@@ -314,19 +348,30 @@ section > div {
 }
 #tv-heading h1 {
     font-size: 135px;
+    text-shadow: 5px 5px orange;
 }
 
 #tv-heading h2 {
     font-size: 25px;
     color: black;
 }
-
 .tv-cards {
     display: flex;
     flex-direction: row;
     width: 100px;
 }
-
+.tv-cards button {
+    background-color: white;
+    font-size: 20px;
+    color:rgb(54, 169, 155);
+    font-family: gi-bold;
+    border-radius: 30px;
+    border: none;
+    padding: 3px;
+}
+.tv-cards button:hover {
+    background-color: orange;
+}
 /* rap cards */
 .rap-music-page {
     display: flex;
@@ -344,16 +389,11 @@ section > div {
     border: solid orange;
 }
 
-#rap-music-content{
-    /* width: 60%; */
-    /* padding: 20px; */ */
-    /* /* margin: 10px; */
-}
-
 .rap-music-footer h2 {
     font-size: 50px;
     line-height: 60px;
 }
+
 /* rap review card */
 .rap-review-card {
     display: flex;
@@ -365,13 +405,41 @@ section > div {
     display: flex;
     flex-direction: column;
 }
+.rating  {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 1px;
+}
+.rating button{
+    border-radius: 30px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color:rgb(54, 169, 155);
+    color: white;
+    border: none;
+    font-family: gi-bold;
+    font-size: 25px;
+}
+button a, button a:visited, button a:link {
+    color:rgb(128, 194, 186)
+}
+button a:active {
+    color: teal;
+}
+button a:hover {
+    color: white;
+}
+
 
 /* music heading - RAP */
 #heading-rap {
     display: flex;
     flex-direction: column;
     text-align: right;
-    color: orange;
+    color: rgb(54, 169, 155);
     background-color:none;
     margin-right: 40px;
     margin-left: 40px;
@@ -380,7 +448,7 @@ section > div {
 }
 #heading-rap h1 {
     font-size: 170px;
-    text-shadow: 5px 5px rgb(54, 169, 155);
+    text-shadow: 5px 5px orange;
 
 }
 #heading-rap h2 {
@@ -460,8 +528,8 @@ section > div {
 }
 #heading-alt h1 {
     font-size: 170px;
-    color: orange;
-    text-shadow: 5px 5px rgb(54, 169, 155);
+    color: rgb(54, 169, 155);
+    text-shadow: 5px 5px orange;
 }
 
 #heading-alt h2{
@@ -545,7 +613,7 @@ section > div {
 }
 
 .pop-music-footer h2 {
-    font-size: 65px;
+    font-size: 37px;
     line-height: 60px;
 }
 
